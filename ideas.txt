@@ -1,5 +1,6 @@
 BASIC
 gustavo as cookie
+hands for cursor
 pet for clickers
 coms members for grandmas
 every time you click, it makes a quack sound effect
@@ -10,10 +11,8 @@ feed for mine
 shack
 apartment for factory
 condo
-townhouse 
 boat
 mansion
-estate
 private jet
 mega yacht
 cruise

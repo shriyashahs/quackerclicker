@@ -25,23 +25,18 @@ public class Quacks {
     public double getQPS() {
         return QPS;
     }
-
     public void setQPS(double qPS) {
         QPS = qPS;
     }
-
     public double getQPC() {
         return QPC;
     }
-
     public void setQPC(double qPC) {
         QPC = qPC;
     }
-
     public double getMultiplier() {
         return multiplier;
     }
-
     public void setMultiplier(double multiplier) {
         this.multiplier = multiplier;
     }
