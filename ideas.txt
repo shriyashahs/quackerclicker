@@ -10,7 +10,7 @@ feed for mine
 shack
 apartment for factory
 condo
-townhouse mansion
+townhouse 
 boat
 mansion
 estate
