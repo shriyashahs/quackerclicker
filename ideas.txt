@@ -20,4 +20,46 @@ cruise
 spaceship
 ufo
 
-hello
+ACHIEVEMENTS
+(EARNING)
+Wake a Quack (Make 1 quack)
+Making Some Nest (Make 1k quack)
+So Quacked Right Now (Make 100k quacks)
+Fledgling Quackery (Make 1m quacks)
+Affluent Pond (Make 100m quacks)
+World-Famouse Duckery (Make 1b quacks)
+Cosmic Quackery (Make 100b quacks)
+Galactic Pond (Make 1t quacks)
+Universal Quackwork (Make 100t quacks)
+Timeless Duckery (1qd/s)
+
+(PETS PER SECOND)
+Casual Quacking (1q/s)
+Hardcore Quacking (10q/s)
+Steady Stream of Quacks (100q/s)
+Quack Monster (1k/s)
+Mass Quackducer (10k/s)
+Quack Vortex (1m/s)
+Quack Pulsar (100m/s)
+Still Quacking? (1b/s)
+Let's Never Quack Again (10b/s)
+A World of Quacks (1t/s)
+
+(PETTING)
+Quacktastic (1k quacks from petting)
+Quackathlon (100k quacks from petting)
+Quackolympics (10m quacks from petting)
+Quackorama (1b quacks from petting)
+Quackasmic (100b quacks from petting)
+
+Clicktastic 	Make 1,000 cookies from clicking. 	30
+Berrylium mouse.png 	Clickathlon 	Make 100,000 cookies from clicking. 	31
+Blueberrylium mouse.png 	Clickolympics 	Make 10 million cookies from clicking. 	32
+Chalcedhoney mouse.png 	Clickorama 	Make 1 billion cookies from clicking. 	33
+Buttergold mouse.png 	Clickasmic 	Make 100 billion cookies from clicking. 	100
+Sugarmuck mouse.png 	Clickageddon 	Make 10 trillion cookies from clicking. 	145
+Jetmint mouse.png 	Clicknarok 	Make 1 quadrillion cookies from clicking. 	146
+Cherrysilver mouse.png 	Clickastrophe 	Make 100 quadrillion cookies from clicking. 	244
+Hazelrald mouse.png 	Clickataclysm 	Make 10 quintillion cookies from clicking. 	245
+Mooncandy mouse.png 	The ultimate clickdown 	Make 1 sextillion cookies from clicking.
+"(of ultimate destiny.)" 	337 
