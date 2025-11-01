@@ -1,3 +1,3 @@
-public abstract Boost() {
+public abstract class Boost {
     private double MULTIPLIER_BOOST;
 }
