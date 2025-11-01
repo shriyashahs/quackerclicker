@@ -1,4 +1,22 @@
+BASIC
 gustavo as cookie
-clickers for clickers
+pet for clickers
 coms members for grandmas
 every time you click, it makes a quack sound effect
+
+BUILDINGS
+pond for farm
+feed for mine
+shack
+apartment for factory
+condo
+townhouse mansion
+boat
+mansion
+estate
+private jet
+mega yacht
+cruise
+spaceship
+ufo
+
