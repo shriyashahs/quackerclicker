@@ -7,11 +7,13 @@ public class Building extends Quacks {
     private final double BASE_QPS;
     private double qps; // quacks per second
     private double qpc; // quacks per click
+    public int amount; 
     
     public Building(long cost, double qps) {
         super();
         BASE_COST = cost;
         BASE_QPS = qps;
+        amount = 0;
     }
     
     /**
@@ -21,5 +23,14 @@ public class Building extends Quacks {
     public double multiplier(long building_count) {
         double multiplier = Math.pow(1.15, building_count);
         return multiplier;
+    }
+    public int getAmt() {
+        return amount;
+    }
+    public void addAmt() {
+        amount++;
+    }
+    public void addAmt(int amt) {
+        amount += amt;
     }
 }
