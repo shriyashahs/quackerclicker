@@ -4,7 +4,7 @@ class Quacks {
     this.QPS = QPS; // quacks per second
     this.QPC = QPC; // quacks per click
     this.multiplier = multiplier; 
-    this.quacks = 50000;
+    this.quacks = 0;
   }
 
   // click

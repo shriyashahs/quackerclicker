@@ -33,7 +33,7 @@ class Gacha {
     static PULL_COST = 10;
 
     constructor() {
-        this.stars = 3000;
+        this.stars = 0;
         this.starCost = 30;
     }
 
