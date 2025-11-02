@@ -1,4 +1,4 @@
-public class Gacha {
+ public static class Gacha {
     int gems;
     int gemCost;
     private final double GEM_MULTIPLIER = 1.2;
