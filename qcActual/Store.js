@@ -9,7 +9,7 @@ class Store{
 
    buy(){
       removeQuacks(this.price);
-      QPS();
+      
    }
 
 
