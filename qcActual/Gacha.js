@@ -8,7 +8,8 @@ let hungry_access=false
 let ta_access=false
 let widget_access=false
 
-gustavo_png=document.querySelector("#gustavo_png_image")
+// safe declaration for the gustavo image element (may be null at load)
+let gustavo_png = document.querySelector("#gustavo_png_image")
 
 let six_seven_skin=document.getElementById("67_skin_img");
 let miku_skin=document.getElementById("miku_skin_img");
@@ -127,9 +128,13 @@ class Gacha {
     }
 
     buyStars(quacks) {
+        // increment stars, charge the player if quacks manager exists
         this.stars++;
-        quacks.removeQuacks(this.starCost);
-        this.starCost *= this.STAR_MULTIPLIER;
+        if (quacks && typeof quacks.removeQuacks === 'function') {
+            quacks.removeQuacks(this.starCost);
+        }
+        // use class constant
+        this.starCost *= Gacha.STAR_MULTIPLIER;
     }
 
     image = [
@@ -167,60 +172,44 @@ class Gacha {
     }
 
     unlockedSkins() {
-        if (six_seven_access){
-            six_seven_skin.src="images/gustavo/67_gustavo.png";
-            six_seven_skin_button.onclick=function() {
-                update(image[1]);
-            };
+        if (six_seven_access) {
+            if (six_seven_skin) six_seven_skin.src = "images/gustavo/67_gustavo.png";
+            if (six_seven_skin_button) six_seven_skin_button.onclick = () => this.update(this.image[1]);
         }
 
-        if (miku_access){
-            miku_skin.src="images/gustavo/miku_gustavo.png";
-            miku_skin_button.onclick=function() {
-                update(image[2]);
-            };
+        if (miku_access) {
+            if (miku_skin) miku_skin.src = "images/gustavo/miku_gustavo.png";
+            if (miku_skin_button) miku_skin_button.onclick = () => this.update(this.image[2]);
         }
 
-        if (ta_access){
-            ta_skin.src="images/gustavo/ta_gustavo.png";
-            ta_skin_button.onclick=function() {
-                update(image[3]);
-            };
+        if (ta_access) {
+            if (ta_skin) ta_skin.src = "images/gustavo/ta_gustavo.png";
+            if (ta_skin_button) ta_skin_button.onclick = () => this.update(this.image[3]);
         }
 
-        if (minecraft_access){
-            minecraft_skin.src="images/gustavo/minecraft_gustavo.png";
-            minecraft_skin_button.onclick=function() {
-                update(image[4]);
-            };
-        }
-        
-        if (widget_access){
-            widget_skin.src="images/gustavo/widget_gustavo.png";
-            widget_skin_button.onclick=function() {
-                update(image[5]);
-            };
+        if (minecraft_access) {
+            if (minecraft_skin) minecraft_skin.src = "images/gustavo/minecraft_gustavo.png";
+            if (minecraft_skin_button) minecraft_skin_button.onclick = () => this.update(this.image[4]);
         }
 
-        if (duck_access){
-            duck_skin.src="images/gustavo/duck_gustavo.png";
-            duck_skin_button.onclick=function() {
-                update(image[6]);
-            };
+        if (widget_access) {
+            if (widget_skin) widget_skin.src = "images/gustavo/widget_gustavo.png";
+            if (widget_skin_button) widget_skin_button.onclick = () => this.update(this.image[5]);
         }
 
-        if (hungry_access){
-            hungry_skin.src="images/gustavo/hungry_gustavo.png";
-            hungry_skin_button.onclick=function() {
-                update(image[7]);
-            };
+        if (duck_access) {
+            if (duck_skin) duck_skin.src = "images/gustavo/duck_gustavo.png";
+            if (duck_skin_button) duck_skin_button.onclick = () => this.update(this.image[6]);
         }
-        
-        if (quackbox_access){
-            quackbox_skin.src="images/gustavo/quackbox_gustavo.png";
-            quackbox_skin_button.onclick=function() {
-                update(image[8]);
-            };
+
+        if (hungry_access) {
+            if (hungry_skin) hungry_skin.src = "images/gustavo/hungry_gustavo.png";
+            if (hungry_skin_button) hungry_skin_button.onclick = () => this.update(this.image[7]);
+        }
+
+        if (quackbox_access) {
+            if (quackbox_skin) quackbox_skin.src = "images/gustavo/quackbox_gustavo.png";
+            if (quackbox_skin_button) quackbox_skin_button.onclick = () => this.update(this.image[8]);
         }
     }
 }
