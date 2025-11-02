@@ -17,7 +17,7 @@ class Building extends Quacks {
    * Used to calculate cost scaling.
    */
   multiplier() {
-    return Math.pow(MULTIPLICITY, amount);
+    return Math.pow(this.MULTIPLICITY, this.amount);
   }
 
   getAmt() {

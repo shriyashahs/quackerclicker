@@ -6,9 +6,9 @@
     </head>
     <body>
         <div id="column1">
-            <span id="amount_of_quacks"><h2>Number Quacks</h2></span>
-            <span id="amount_of_quacks_per_second"><p>Number Per Second</p></span>
-            <span><button id="gustavo_png" src="/qcActual/images/gustavo/base_gustavo.png" onclick="click()"></button></span>
+            <span id="amount_of_quacks"><h2>Number Quacks: 0</h2></span>
+            <span id="amount_of_quacks_per_second"><p>Quacks Per Second: 0</p></span>
+            <span><button id="gustavo_png"><img src="images/gustavo/base_gustavo.png" alt="Gustavo"></button></span>
             <span id="png_pile"></span>
         </div>
         
@@ -24,24 +24,24 @@
             <details>
                 <summary>Change Skins</summary>
                 <div class="buttons">
-                    <button id="base_skin" src="qcActual/images/gustavo/base_gustavo.png"></button>
-                    <button id="67_skin" src="qcActual/images/question_mark.png"></button>
-                    <button id="miku_skin" src="qcActual/images/question_mark.png"></button>
-                    <button id="ta_skin" src="qcActual/images/question_mark.png"></button>
-                    <button id="minecraft_skin" src="qcActual/images/question_mark.png"></button>
-                    <button id="widget_skin" src="qcActual/images/question_mark.png"></button>
-                    <button id="duck_skin" src="qcActual/images/question_mark.png"></button>
-                    <button id="hungry_skin" src="qcActual/images/question_mark.png"></button>
-                    <button id="quackbox_skin" src="qcActual/images/question_mark.png"></button>
+                    <button id="base_skin"><img src="images/gustavo/base_gustavo.png"></button>
+                    <button id="67_skin"><img src="images/question_mark.png"></button>
+                    <button id="miku_skin"><img src="images/question_mark.png"></button>
+                    <button id="ta_skin"><img src="images/question_mark.png"></button>
+                    <button id="minecraft_skin"><img src="images/question_mark.png"></button>
+                    <button id="widget_skin"><img src="images/question_mark.png"></button>
+                    <button id="duck_skin"><img src="images/question_mark.png"></button>
+                    <button id="hungry_skin"><img src="images/question_mark.png"></button>
+                    <button id="quackbox_skin"><img src="images/question_mark.png"></button>
                 </div>
             </details>
             
             <details>
                 <summary>Change Themes</summary>
                 <button id="normal_theme"></button>
-                <button id="purple_theme" src="qcActual/images/question_mark.png"></button>
-                <button id="teal_theme" src="qcActual/images/question_mark.png"></button>
-                <button id="orange_theme" src="qcActual/images/question_mark.png"></button>
+                <button id="purple_theme"><img src="images/question_mark.png"></button>
+                <button id="teal_theme"><img src="images/question_mark.png"></button>
+                <button id="orange_theme"><img src="images/question_mark.png"></button>
             </details>
             
         </div>
@@ -50,20 +50,28 @@
             <span><h2>Store</h2></span>
             <span><h3>Gems</h3></span>
             <div>
-                <button id="hands" src="qcActual/images/upgrades/hand.png"></button>
-                <button id="coms_members_buy" src="qcActual/images/upgrades/coms_member.png"></button>
-                <button id="pond_buy" src="/qcActual/images/upgrades/pond.png"></button>
-                <button id="feed_buy" src="qcActual/images/upgrades/feed.png"></button>
-                <button id="shack_buy" src="qcActual/images/upgrades/shack.png"></button>
-                <!-- <button id="apartment_buy" src="qcActual/images/upgrades/apartment.png"></spbuttonan>
-                <button id="condo_buy" src="qcActual/images/upgrades/condo.png"></button>
-                <button id="boat_buy" src="qcActual/images/upgrades/boat.png"></button>
-                <button id="mansion_buy" src="qcActual/images/upgrades/mansion.png"></button>
-                <button id="private_jet_buy" src="qcActual/images/upgrades/private_jet.png"></button>
-                <button id="mega_yacht_buy" src="qcActual/images/upgrades/yacht.png"></button>
-                <button id="spaceship_buy" src="qcActual/images/upgrades/spaceship.png"></button>
-                <button id="ufo_buy" src="qcActual/images/upgrades/ufo.png"></button> -->
+                <button id="hands"><img src="images/upgrades/hand.png"></button>
+                <button id="coms_members_buy"><img src="images/upgrades/coms_member.png"></button>
+                <button id="pond_buy"><img src="images/upgrades/pond.png"></button>
+                <button id="feed_buy"><img src="images/upgrades/feed.png"></button>
+                <button id="shack_buy"><img src="images/upgrades/shack.png"></button>
+                <!-- 
+                <button id="apartment_buy"><img src="images/upgrades/apartment.png"></button>
+                <button id="condo_buy"><img src="images/upgrades/condo.png" alt="condo"></button>
+                <button id="boat_buy"><img src="images/upgrades/boat.png" alt="boat"></button>
+                <button id="mansion_buy"><img src="images/upgrades/mansion.png" alt="mansion"></button>
+                <button id="private_jet_buy"><img src="images/upgrades/private_jet.png" alt="private jet"></button>
+                <button id="mega_yacht_buy"><img src="images/upgrades/yacht.png" alt="yacht"></button>
+                <button id="spaceship_buy"><img src="images/upgrades/spaceship.png" alt="spaceship"></button>
+                <button id="ufo_buy"><img src="images/upgrades/ufo.png" alt="ufo"></button> 
+                -->
             </div>
         </div>
+        <!-- Load scripts in correct dependency order -->
+        <script src="Quacks.js"></script>
+        <script src="Buildings.js"></script>
+        <script src="Store.js"></script>
+        <script src="Gacha.js"></script>
+        <script src="Game.js"></script>
     </body>
 </html>

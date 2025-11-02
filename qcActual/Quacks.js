@@ -10,14 +10,20 @@ class Quacks {
   // click
   click() {
     this.quacks += this.QPC;
+    this.updateDisplay();
   }
 
   // Getters and setters
   getQPS() {      
     return this.QPS;
   }
+  setQPS(qps) {
+    this.QPS = qps;
+  }
   incrementQPS() {
     this.QPS++;
+    const doc = document.getElementById("amount_of_quacks_per_second");
+    doc.innerHTML = "<p>Quacks Per Second: " + this.QPS + "</p>";
   }
   getQPC() {
     return this.QPC;
@@ -40,7 +46,8 @@ class Quacks {
   removeQuacks(quacks) {
     this.quacks -= quacks;
   }
-  incrementQuacks() {    
-    this.quacks += this.QPC;
+  updateDisplay() {    
+    const doc = document.getElementById("amount_of_quacks");
+    doc.innerHTML = "<h2>Number Quacks: " + Math.floor(this.quacks) + "</h2>";
   }
 }
