@@ -6,23 +6,25 @@
     </head>
     <body>
         <div id="column1">
-            <span id="amount_of_quacks"><h2>Number Quacks: 0</h2></span>
-            <span id="amount_of_quacks_per_second"><p>Quacks Per Second: 0</p></span>
+            <span id="amount_of_quacks" class="text"><h2>Number Quacks: 0</h2></span>
+            <span id="amount_of_quacks_per_second" class="text"><p>Quacks Per Second: 0</p></span>
             <span><button id="gustavo_png"><img src="images/gustavo/base_gustavo.png" alt="Gustavo"></button></span>
             <span id="png_pile"></span>
         </div>
         
         <div id="column2">
-            <span><h2>Gacha</h2></span>
-            <span><button id="pull_skins">Pull Skins</button></span>
-            <span><button id="pull_theme">Pull Themes</button></span>
+            <span class="text"><h2>Gacha</h2></span>
+            <span><button id="pull_skins">Pull Skins - 10 &#10022;</button></span>
+            <span><button id="pull_theme">Pull Themes - 10 &#10022;</button></span>
+            
             <div class="popup">
-                <img id="pull_pop">
+                <img id="roulette" src="images/gustavo/roulette.gif" alt="Roulette.gif">
             </div>
+            
             <hr>
         <!--code from https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details-->
             <details>
-                <summary>Change Skins</summary>
+                <summary class="text">Change Skins</summary>
                 <div class="buttons">
                     <button id="base_skin"><img src="images/gustavo/base_gustavo.png"></button>
                     <button id="67_skin"><img src="images/question_mark.png"></button>
@@ -37,7 +39,7 @@
             </details>
             
             <details>
-                <summary>Change Themes</summary>
+                <summary class="text">Change Themes</summary>
                 <button id="normal_theme"></button>
                 <button id="purple_theme"><img src="images/question_mark.png"></button>
                 <button id="teal_theme"><img src="images/question_mark.png"></button>
@@ -47,8 +49,8 @@
         </div>
 
         <div id="column3">
-            <span><h2>Store</h2></span>
-            <span><h3>Gems</h3></span>
+            <span class="text"><h2>Store</h2></span>
+            <span id="curr_stars"><h3>Stars &#x2726;: 0</h3></span>
             <div>
                 <button id="hands"><img src="images/upgrades/hand.png"></button>
                 <button id="coms_members_buy"><img src="images/upgrades/coms_member.png"></button>

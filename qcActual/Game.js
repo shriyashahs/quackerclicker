@@ -1,6 +1,7 @@
 class Game {
   constructor() {
     this.quacks = new Quacks();
+    this.gacha = new Gacha();
     this.buildings = this.createBuildings(); // store buildings
     this.updateQPS(); // set initial QPS
 
@@ -12,6 +13,12 @@ class Game {
     const gustavoBtn = document.getElementById("gustavo_png");
     gustavoBtn.onclick = () => {
       this.quacks.click();
+      this.updateDisplay();
+    };
+    const pullSkinBtn = document.getElementById("pull_skins");
+    pullSkinBtn.onclick = () => {
+      this.gacha.pullSkin();
+      document.getElementById("roulette").style.visibility = "hidden";
       this.updateDisplay();
     };
   }
@@ -28,6 +35,8 @@ class Game {
       "<h2>Number Quacks: " + Math.floor(this.quacks.getQuacks()) + "</h2>";
     document.getElementById("amount_of_quacks_per_second").innerHTML = 
       "<p>Quacks Per Second: " + this.quacks.getQPS().toFixed(1) + "</p>";
+    document.getElementById("curr_stars").innerHTML = 
+      "<h3>Stars &#x2726;: " + this.gacha.getStars() + "</h3>";
   }
 
   /**

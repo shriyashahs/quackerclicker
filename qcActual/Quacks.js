@@ -10,7 +10,6 @@ class Quacks {
   // click
   click() {
     this.quacks += this.QPC;
-    this.updateDisplay();
   }
 
   // Getters and setters

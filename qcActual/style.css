@@ -9,11 +9,6 @@ body{
     text-align: center;
 }
 
-#gustavo_png {
-    margin: auto auto;
-    max-width: 100%;
-}
-
 p {
     margin-top: -20px;
 }
@@ -41,6 +36,11 @@ hr {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     margin-top: 10px;
+}
+
+#roulette {
+    width: 100%;
+    visibility: hidden;
 }
 
 /* We couldn't figure out how to fit two buttons in one row, so we asked CoPilot to help us. */
@@ -71,7 +71,7 @@ details > button {
 
 
 /*/**
- * CSS customization for store
+ * CSS customization for store w dropdown
  */
 /*customizing the 'title' before the dropdown*/
 /* #column3 summary{
