@@ -9,7 +9,7 @@ class Gacha {
 
     pullSkin() {
         document.getElementById("roulette").style.visibility = "visible";
-        this.stars -= this.PULL_COST;
+        this.stars -= Gacha.PULL_COST;
         const pull = Math.random();
 
     // show the popup image and set the roulette animation
