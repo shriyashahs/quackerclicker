@@ -8,12 +8,15 @@ class Gacha {
     }
 
     pullSkin() {
-        gems -= PULL_COST;
+        this.gems -= this.PULL_COST;
         const pull = Math.random();
 
     // show the popup image and set the roulette animation
     document.getElementById("pull_pop").style.visibility = "visible";
     document.getElementById("pull_pop").src="images/gustavo/roulette.gif";
+        // show the popup image and set the roulette animation
+        document.getElementById("pull_pop").style.visibility = "visible";
+        document.getElementById("pull_pop").src="images/gustavo/roulette.gif";
         setTimeout("", 3000);
 
         if (0 <= pull < 0.125) {
@@ -64,12 +67,12 @@ class Gacha {
     }
 
     getGems() {
-        return gems;
+        return this.gems;
     }
 
     buyGems(quacks) {
-        gems++;
-        quacks.removeQuacks(gemCost);
-        gemCost *= GEM_MULTIPLIER;
+        this.gems++;
+        quacks.removeQuacks(this.gemCost);
+        this.gemCost *= this.GEM_MULTIPLIER;
     }
 }

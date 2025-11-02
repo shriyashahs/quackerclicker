@@ -9,11 +9,11 @@ class Game {
   }
 
   setupListeners() {
-    const gustavoBtn = document.getElementById("gustavo-btn");
-    gustavoBtn.addEventListener("click", () => {
-      this.quacks.incrementQuacks();
+    const gustavoBtn = document.getElementById("gustavo_png");
+    gustavoBtn.onclick = () => {
+      this.quacks.click();
       this.updateDisplay();
-    });
+    };
   }
 
   startQPSLoop() {
@@ -24,10 +24,10 @@ class Game {
   }
 
   updateDisplay() {
-    document.getElementById("quacks-display").textContent = 
-      `Quacks: ${Math.floor(this.quacks.quacks)}`;
-    document.getElementById("qps-display").textContent = 
-      `QPS: ${this.quacks.getQPS().toFixed(1)}`;
+    document.getElementById("amount_of_quacks").innerHTML = 
+      "<h2>Number Quacks: " + Math.floor(this.quacks.getQuacks()) + "</h2>";
+    document.getElementById("amount_of_quacks_per_second").innerHTML = 
+      "<p>Quacks Per Second: " + this.quacks.getQPS().toFixed(1) + "</p>";
   }
 
   /**
@@ -76,6 +76,6 @@ class Game {
 }
 
 // Initialize the game after DOM loads
-document.addEventListener("DOMContentLoaded", () => {
-  const game = new Game();
+document.addEventListener('DOMContentLoaded', () => {
+  window.game = new Game();
 });
