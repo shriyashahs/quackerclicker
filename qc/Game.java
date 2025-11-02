@@ -49,6 +49,7 @@ public class Game {
      */
     public void buildingsPanel() {
         JPanel buildingPanel = new JPanel();
+        buildingPanel.setLayout(new BoxLayout());
 
     }
 
