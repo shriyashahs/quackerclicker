@@ -2,11 +2,13 @@ public class Quacks {
     private double QPS; //quacks per second
     private double QPC; //quacks per click
     private double multiplier;
+    private int quacks;
 
     public Quacks() {
         QPS = 0;
         QPC = 1;
         multiplier = 1;
+        quacks = 0;
     }
 
     /**
@@ -25,20 +27,32 @@ public class Quacks {
     public double getQPS() {
         return QPS;
     }
-    public void setQPS(double qPS) {
-        QPS = qPS;
+    public void setQPS(double qps) {
+        QPS = qps;
     }
     public double getQPC() {
         return QPC;
     }
-    public void setQPC(double qPC) {
-        QPC = qPC;
+    public void setQPC(double qpc) {
+        QPC = qpc;
     }
     public double getMultiplier() {
         return multiplier;
     }
     public void setMultiplier(double multiplier) {
         this.multiplier = multiplier;
+    }
+    public int getQuacks() {
+        return quacks;
+    }
+    public void addQuacks(int quacks) {
+        this.quacks += quacks;
+    }
+    public void removeQuacks(int quacks) {
+        this.quacks -= quacks;
+    }
+    public void incrementQuacks() {
+        quacks += QPC;
     }
     
 }

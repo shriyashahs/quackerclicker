@@ -1,31 +1,58 @@
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
-import javax.swing.Icon;
+import javax.swing.*;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Game {
-    public JFrame frame;
+    private JFrame frame;
+    public Quacks quacks;
     
     public void mainFrame() {
         frame = new JFrame("Quacker Clicker");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setVisible(true);
+    }
+
+    private JButton createButton(ImageIcon image) {
+        return null; // stub out
+    }
+    /**
+     * the panel containing the upgrade buttons
+     */
+    public void upgradesPanel() {
+        JPanel upgradePanel = new JPanel();
+        upgradePanel.setLayout(new BoxLayout(upgradePanel, BoxLayout.PAGE_AXIS));
+
+        JButton button = new JButton();
+        button.addActionListener( new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+            }
+        });
+
+        frame.add(new JScrollPane(upgradePanel));
+    }
+    /**
+     * panel containing Gustavo, whom you click to get quacks
+     */
+    public void quacksPanel() {
+        JPanel gustavoPanel = new JPanel();
         
     }
-
-    public void upgradesPanel() {
-
-    }
-
-    public void quacksPanel() {
-
-    }
-
+    /**
+     * The panel containing the building visuals 
+     */
     public void buildingsPanel() {
+        JPanel buildingPanel = new JPanel();
 
     }
 
-    public void createBuildings() {
+    /**
+     * All initizations of each different building
+     */
+    public static void createBuildings() {
         Building hand = new Building(15, 0.1); // 15, 0.1
         Building comsMember = new Building(100, 1); // 100, 1
         Building pond = new Building(1100, 8); // 1.1k, 8
@@ -43,6 +70,7 @@ public class Game {
     }
 
     public static void main(String[] args) {
+        createBuildings();
         
     }
 }
