@@ -15,7 +15,6 @@ boat
 mansion
 private jet
 mega yacht
-cruise
 spaceship
 ufo
 
