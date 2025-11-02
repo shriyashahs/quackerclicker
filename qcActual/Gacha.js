@@ -12,6 +12,9 @@ class Gacha {
         this.stars -= this.PULL_COST;
         const pull = Math.random();
 
+    // show the popup image and set the roulette animation
+    document.getElementById("pull_pop").style.visibility = "visible";
+    document.getElementById("pull_pop").src="images/gustavo/roulette.gif";
         // show the popup image and set the roulette animation
         document.getElementById("roulette").src="images/gustavo/roulette.gif";
 
