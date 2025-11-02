@@ -51,19 +51,6 @@ class Gacha {
             document.getElementById("roulette").src="images/gustavo/widget_gustavo.png";
         }
     }
-    pullTheme() {
-        stars -= PULL_COST;
-        const pull = Math.random();
-        if (pull >= 0 && pull < 0.35) {
-            //set theme
-        }
-        if (pull >= 0.35 && pull < 0.7) {
-            //set theme
-        }
-        if (pull >= 0.7 && pull <= 1) {
-            //set theme
-        }
-    }
 
     getStars() {
         return this.stars;
