@@ -41,6 +41,20 @@ hr {
 #roulette {
     width: 100%;
     visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+#pull_pop {
+    width: 100%;
+    visibility: hidden;
 }
 
 /* We couldn't figure out how to fit two buttons in one row, so we asked CoPilot to help us. */

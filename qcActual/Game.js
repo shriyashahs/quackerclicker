@@ -18,8 +18,14 @@ class Game {
     const pullSkinBtn = document.getElementById("pull_skins");
     pullSkinBtn.onclick = () => {
       this.gacha.pullSkin();
-      document.getElementById("roulette").style.visibility = "hidden";
+
+      // Prevent repeated clicks while animation runs. Re-enable after 3s.
+      pullSkinBtn.disabled = true;
       this.updateDisplay();
+      setTimeout(() => {
+        pullSkinBtn.disabled = false;
+        this.updateDisplay();
+      }, 3000);
     };
   }
 

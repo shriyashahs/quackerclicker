@@ -1,14 +1,15 @@
-texts=document.querySelectorAll(".text")
-col1=document.querySelector("#column1")
-col2=document.querySelector("#column2")
-col3=document.querySelector("#column3")
+document.addEventListener('DOMContentLoaded', () => {
+    const texts = document.querySelectorAll(".text");
+    const col1 = document.querySelector("#column1");
+    const col2 = document.querySelector("#column2");
+    const col3 = document.querySelector("#column3");
 
-normalThemeButton=document.querySelector("#normal_theme")
-tealThemeButton=document.querySelector("#teal_theme")
-purpleThemeButton=document.querySelector("#purple_theme")
-orangeThemeButton=document.querySelector("#orange_theme")
+    const normalThemeButton = document.querySelector("#normal_theme");
+    const tealThemeButton = document.querySelector("#teal_theme");
+    const purpleThemeButton = document.querySelector("#purple_theme");
+    const orangeThemeButton = document.querySelector("#orange_theme");
 
-themes = [
+    const themes = [
    {
       name:"Basic",
       font:"Arial",
@@ -65,3 +66,4 @@ function changePurple(){
 function changeOrange(){
    update(themes[2])
 }
+});
