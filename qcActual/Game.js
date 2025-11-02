@@ -37,87 +37,102 @@ class Game {
   }
 
   updateDisplay() {
-    document.getElementById("amount_of_quacks").innerHTML = 
-      "<h2>Number Quacks: " + Math.floor(this.quacks.getQuacks()) + "</h2>";
+    // Update top-level quack displays
+    const quacksCountEl = document.getElementById("amount_of_quacks");
+    if (quacksCountEl) quacksCountEl.innerHTML = "<h2>Number Quacks: " + Math.floor(this.quacks.getQuacks()) + "</h2>";
 
-    document.getElementById("amount_of_quacks_per_second").innerHTML = 
-      "<p>Quacks Per Second: " + this.quacks.getQPS.toFixed(1) + "</p>";
+    const qpsEl = document.getElementById("amount_of_quacks_per_second");
+    if (qpsEl) qpsEl.innerHTML = "<p>Quacks Per Second: " + this.quacks.getQPS().toFixed(1) + "</p>";
 
-    document.getElementById("amount_of_quacks_per_click").innerHTML = 
-      "<p>Quacks Per Click: " + this.quacks.getQPC.toFixed(1) + "</p>";
+    const qpcEl = document.getElementById("amount_of_quacks_per_click");
+    if (qpcEl) qpcEl.innerHTML = "<p>Quacks Per Click: " + this.quacks.getQPC().toFixed(1) + "</p>";
 
-    document.getElementById("curr_stars").innerHTML = 
-      "<h3>Stars &#x2726;: " + this.gacha.getStars() + "</h3>";
+    const starsEl = document.getElementById("curr_stars");
+    if (starsEl) starsEl.innerHTML = "<h3>Stars &#x2726;: " + this.gacha.getStars() + "</h3>";
 
+    // Helper to safely get building instance and update an element
+    const b = (name) => this.buildings && this.buildings[name] ? this.buildings[name] : null;
 
+    // Hands
+    const hands = b('hand');
+    if (hands) {
+      const elCurr = document.getElementById('curr_hands');
+      if (elCurr) elCurr.innerHTML = '<h3>Hands: ' + hands.getAmt() + '</h3>';
 
-    document.getElementById("curr_hands").innerHTML = 
-      "<h3>Hands: " + this.hand.getAmount() + "</h3>";
+      const elCost = document.getElementById('hands_cost');
+      if (elCost) elCost.innerHTML = '<h3>' + hands.getCost() + ' quacks</h3>';
 
-    document.getElementById("hands_cost").innerHTML = 
-      "<h3>" + this.hand.getCost() + " quacks</h3>";
+      const elOne = document.getElementById('hands_one_per_sec');
+      if (elOne) elOne.innerHTML = '<h3>Each hand produces ' + hands.getBaseQPS() + ' quacks per second</h3>';
 
-    document.getElementById("hands_one_per_sec").innerHTML = 
-      "<h3>Each hand produces " + this.hand.getBaseQPS() + " quacks per second" + "</h3>";
+      const elTotal = document.getElementById('hands_total_per_sec');
+      if (elTotal) elTotal.innerHTML = '<h3>' + hands.getAmt() + ' hands producing ' + hands.getQPS() + ' quacks per second</h3>';
+    }
 
-    document.getElementById("hands_total_per_sec").innerHTML = 
-      "<h3>" + this.hand.getAmount() + " hands producing " + this.hand.getQPS() + " quacks per second " + "</h3>";
+    // COMS Members
+    const coms = b('comsMember');
+    if (coms) {
+      const elCurr = document.getElementById('curr_coms_mems');
+      if (elCurr) elCurr.innerHTML = '<h3>COMS Members: ' + coms.getAmt() + '</h3>';
 
+      const elCost = document.getElementById('coms_mem_cost') || document.getElementById('coms_mem_cost');
+      // main.html uses id 'coms_mem_cost' and 'coms_mem_per_sec' slots
+      if (elCost) elCost.innerHTML = '<h3>' + coms.getCost() + ' quacks</h3>';
 
-      
-    document.getElementById("curr_coms_mems").innerHTML = 
-      "<h3>COMS Members: " + this.comsMember.getAmount() + "</h3>";
-    
-    document.getElementById("comsMember_cost").innerHTML = 
-      "<h3>" + this.comsMember.getCost() + " quacks</h3>";
+      const elOne = document.getElementById('coms_mem_per_sec');
+      if (elOne) elOne.innerHTML = '<h3>Each coms member produces ' + coms.getBaseQPS() + ' quacks per second</h3>';
 
-    document.getElementById("comsMember_one_per_sec").innerHTML = 
-      "<h3>Each COMS member produces " + this.comsMember.getBaseQPS() + " quacks per second" + "</h3>";
+      const elTotal = document.querySelectorAll('#coms_mem_per_sec')[1];
+      if (elTotal) elTotal.innerHTML = '<h3>' + coms.getAmt() + ' coms members producing ' + coms.getQPS() + ' quacks per second</h3>';
+    }
 
-    document.getElementById("comsMember_total_per_sec").innerHTML = 
-      "<h3>" + this.comsMember.getAmount() + " COMS members producing " + this.comsMember.getQPS() + " quacks per second " + "</h3>";
+    // Pond
+    const pond = b('pond');
+    if (pond) {
+      const elCurr = document.getElementById('curr_pond');
+      if (elCurr) elCurr.innerHTML = '<h3>Ponds: ' + pond.getAmt() + '</h3>';
 
+      const elCost = document.getElementById('pond_cost');
+      if (elCost) elCost.innerHTML = '<h3>' + pond.getCost() + ' quacks</h3>';
 
+      const elOne = document.getElementById('pond_one_per_sec');
+      if (elOne) elOne.innerHTML = '<h3>Each pond produces ' + pond.getBaseQPS() + ' quacks per second</h3>';
 
-    document.getElementById("curr_pond").innerHTML = 
-      "<h3>Ponds: " + this.pond.getAmount() + "</h3>";
+      const elTotal = document.getElementById('pond_total_per_sec');
+      if (elTotal) elTotal.innerHTML = '<h3>' + pond.getAmt() + ' ponds producing ' + pond.getQPS() + ' quacks per second</h3>';
+    }
 
-    document.getElementById("pond_cost").innerHTML = 
-      "<h3>" + this.pond.getCost() + " quacks</h3>";
+    // Feed
+    const feed = b('feed');
+    if (feed) {
+      const elCurr = document.getElementById('curr_feed');
+      if (elCurr) elCurr.innerHTML = '<h3>Feeds: ' + feed.getAmt() + '</h3>';
 
-    document.getElementById("pond_one_per_sec").innerHTML = 
-      "<h3>Each pond produces " + this.pond.getBaseQPS() + " quacks per second" + "</h3>";
+      const elCost = document.getElementById('feed_cost');
+      if (elCost) elCost.innerHTML = '<h3>' + feed.getCost() + ' quacks</h3>';
 
-    document.getElementById("pond_total_per_sec").innerHTML = 
-      "<h3>" + this.hand.getAmount() + " ponds producing " + this.pond.getQPS() + " quacks per second " + "</h3>";
+      const elOne = document.getElementById('feed_one_per_sec');
+      if (elOne) elOne.innerHTML = '<h3>Each feed produces ' + feed.getBaseQPS() + ' quacks per second</h3>';
 
+      const elTotal = document.getElementById('feed_total_per_sec');
+      if (elTotal) elTotal.innerHTML = '<h3>' + feed.getAmt() + ' feeds producing ' + feed.getQPS() + ' quacks per second</h3>';
+    }
 
+    // Shack
+    const shack = b('shack');
+    if (shack) {
+      const elCurr = document.getElementById('curr_shack');
+      if (elCurr) elCurr.innerHTML = '<h3>Shacks: ' + shack.getAmt() + '</h3>';
 
-    document.getElementById("curr_feed").innerHTML = 
-      "<h3>Feeds: " + this.feed.getAmount() + "</h3>";
+      const elCost = document.getElementById('shack_cost');
+      if (elCost) elCost.innerHTML = '<h3>' + shack.getCost() + ' quacks</h3>';
 
-    document.getElementById("feed_cost").innerHTML = 
-      "<h3>" + this.feed.getCost() + " quacks</h3>";
+      const elOne = document.getElementById('shack_one_per_sec');
+      if (elOne) elOne.innerHTML = '<h3>Each shack produces ' + shack.getBaseQPS() + ' quacks per second</h3>';
 
-    document.getElementById("feed_one_per_sec").innerHTML = 
-      "<h3>Each feed produces " + this.feed.getBaseQPS() + " quacks per second" + "</h3>";
-
-    document.getElementById("feed_total_per_sec").innerHTML = 
-      "<h3>" + this.feed.getAmount() + " feeds producing " + this.feed.getQPS() + " quacks per second " + "</h3>";
-
-
-
-    document.getElementById("curr_shack").innerHTML = 
-      "<h3>Shacks: " + this.shack.getAmount() + "</h3>";
-
-    document.getElementById("shack_cost").innerHTML = 
-      "<h3>" + this.shack.getCost() + " quacks</h3>";
-
-    document.getElementById("shack_one_per_sec").innerHTML = 
-      "<h3>Each shack produces " + this.shack.getBaseQPS() + " quacks per second" + "</h3>";
-
-    document.getElementById("shack_total_per_sec").innerHTML = 
-      "<h3>" + this.shack.getAmount() + " shacks producing " + this.shack.getQPS() + " quacks per second " + "</h3>";
+      const elTotal = document.getElementById('shack_total_per_sec');
+      if (elTotal) elTotal.innerHTML = '<h3>' + shack.getAmt() + ' shacks producing ' + shack.getQPS() + ' quacks per second</h3>';
+    }
   }
 
   /**
