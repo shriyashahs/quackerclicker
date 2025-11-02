@@ -1,3 +1,5 @@
+package quack;
+
 public class Gacha {
     int gems;
     int gemCost;
@@ -10,18 +12,22 @@ public class Gacha {
     }
 
     public String pullSkin() {
+        gems -= PULL_COST;
+        double pull = Math.random();
         return "";
     }
     public String pullTheme() {
+        gems -= PULL_COST;
+        double pull = Math.random();
         return "";
     }
 
     public int getGems() {
         return gems;
     }
-    public void buyGems() {
+    public void buyGems(Quacks quacks) {
         gems++;
-        removeQuacks(gemCost);
+        quacks.removeQuacks(gemCost);
         gemCost *= GEM_MULTIPLIER;
     }
 }

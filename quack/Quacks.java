@@ -1,4 +1,4 @@
-
+package quack;
 
 public class Quacks {
     private double QPS; //quacks per second
@@ -29,8 +29,8 @@ public class Quacks {
     public double getQPS() {
         return QPS;
     }
-    public void setQPS(double qps) {
-        QPS = qps;
+    public void incrementQPS() {
+        QPS;
     }
     public double getQPC() {
         return QPC;
@@ -41,9 +41,9 @@ public class Quacks {
     public double getMultiplier() {
         return multiplier;
     }
-    public void setMultiplier(double multiplier) {
-        this.multiplier = multiplier;
-    }
+    // public void multiplier(double multiplier) {
+    //     this.multiplier = multiplier;
+    // }
     public int getQuacks() {
         return quacks;
     }
