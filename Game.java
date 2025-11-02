@@ -15,7 +15,16 @@ public class Game {
     }
 
     private JButton createButton(ImageIcon image) {
-        return null; // stub out
+        JButton button = new JButton();
+        button.setIcon(image);
+        button.addActionListener( new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+            }
+        });
+        
+        return button;
     }
     /**
      * the panel containing the upgrade buttons
@@ -24,13 +33,7 @@ public class Game {
         JPanel upgradePanel = new JPanel();
         upgradePanel.setLayout(new BoxLayout(upgradePanel, BoxLayout.PAGE_AXIS));
 
-        JButton button = new JButton();
-        button.addActionListener( new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-            }
-        });
+
 
         frame.add(new JScrollPane(upgradePanel));
     }

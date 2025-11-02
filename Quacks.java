@@ -1,3 +1,5 @@
+
+
 public class Quacks {
     private double QPS; //quacks per second
     private double QPC; //quacks per click
@@ -54,5 +56,4 @@ public class Quacks {
     public void incrementQuacks() {
         quacks += QPC;
     }
-    
 }

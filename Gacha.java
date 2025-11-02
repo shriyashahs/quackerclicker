@@ -24,6 +24,4 @@ public class Gacha {
         removeQuacks(gemCost);
         gemCost *= GEM_MULTIPLIER;
     }
-
-
 }
