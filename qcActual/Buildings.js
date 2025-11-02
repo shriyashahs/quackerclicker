@@ -5,7 +5,7 @@ class Building extends Quacks {
   constructor(cost, qps) {
     super();
     this.BASE_COST = cost;
-    this.MULTIPLICITY = 0.15; // cost increases by 15% per additional building
+    this.MULTIPLICITY = 1.15; // cost increases by 15% per additional building
     this.BASE_QPS = qps;
     this.qps = 0;  // quacks per second
     this.qpc = 0;  // quacks per click
@@ -16,8 +16,8 @@ class Building extends Quacks {
    * Raises 1.15 to the power of the building count.
    * Used to calculate cost scaling.
    */
-  multiplier(buildingCount) {
-    return Math.pow(1.15, buildingCount);
+  multiplier() {
+    return Math.pow(MULTIPLICITY, amount);
   }
 
   getAmt() {
