@@ -24,6 +24,25 @@ class Game {
         document.getElementById("quacks-display").textContent = `Quacks: ${Math.floor(this.quacks.quacks)}`;
         document.getElementById("qps-display").textContent = `QPS: ${this.quacks.getQPS().toFixed(1)}`;
     }
+    
+    function createBuildings() {
+        return {
+            hand: new Building(15, 0.1),
+            comsMember: new Building(100, 1),
+            pond: new Building(1100, 8),
+            feed: new Building(12000, 47),
+            shack: new Building(130000, 260),
+            // apartment: new Building(1400000, 1400),
+            // condo: new Building(20000000, 7800),
+            // boat: new Building(330000000, 44000),
+            // mansion: new Building(5100000000, 260000),
+            // privateJet: new Building(75000000000, 1600000),
+            // megaYacht: new Building(1000000000000, 10000000),
+            // cruise: new Building(14000000000000, 65000000),
+            // spaceship: new Building(170000000000000, 4300000000),
+            // ufo: new Building(2100000000000000, 2900000000),
+        };
+    }
 }
 
 // Initialize the game after DOM loads

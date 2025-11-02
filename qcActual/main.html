@@ -2,29 +2,53 @@
 <html>
     <head>
         <title>Quacker Clicker</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="column1">
-            <span id="amount_of_quacks"><span id="amount_of_quacks_number">Number</span>Quacks</span>
-            <span id="amount_of_quacks_per_second"><span id="amount_of_quacks_per_second_number">Number</span>Per Second</span>
-            <span><img src="/Image/Gustavo/base_gustavo.png"></span>
+            <span id="amount_of_quacks"><h2>Number Quacks</h2></span>
+            <span id="amount_of_quacks_per_second"><p>Number Per Second</p></span>
+            <span><button id="gustavo_png" src="/qcActual/images/gustavo/base_gustavo.png" onclick="click()"></button></span>
+            <span id="png_pile"></span>
         </div>
+        
         <div id="column2">
-            <span id="coms_members"></span>
-            <span id="pond"></span>
-            <span id="feed"></span>
-            <span id="shack"></span>
-            <span id="apartment"></span>
-            <span id="condo"></span>
-            <span id="boat"></span>
-            <span id="mansion"></span>
-            <span id="private_jet"></span>
-            <span id="mega_yacht"></span>
-            <span id="spaceship"></span>
-            <span id="ufo"></span>
+            <span><h2>Gacha</h2></span>
+            <span><button id="pull_skins">Pull Skins</button></span>
+            <span><button id="pull_theme">Pull Themes</button></span>
+            <div class="popup">
+                <img id="pull_pop">
+            </div>
+            <hr>
+        <!--code from https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details-->
+            <details>
+                <summary>Change Skins</summary>
+                <div class="buttons">
+                    <button id="base_skin" src="qcActual/images/gustavo/base_gustavo.png"></button>
+                    <button id="67_skin" src="qcActual/images/question_mark.png"></button>
+                    <button id="miku_skin" src="qcActual/images/question_mark.png"></button>
+                    <button id="ta_skin" src="qcActual/images/question_mark.png"></button>
+                    <button id="minecraft_skin" src="qcActual/images/question_mark.png"></button>
+                    <button id="widget_skin" src="qcActual/images/question_mark.png"></button>
+                    <button id="duck_skin" src="qcActual/images/question_mark.png"></button>
+                    <button id="hungry_skin" src="qcActual/images/question_mark.png"></button>
+                    <button id="quackbox_skin" src="qcActual/images/question_mark.png"></button>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Change Themes</summary>
+                <button id="normal_theme"></button>
+                <button id="purple_theme" src="qcActual/images/question_mark.png"></button>
+                <button id="teal_theme" src="qcActual/images/question_mark.png"></button>
+                <button id="orange_theme" src="qcActual/images/question_mark.png"></button>
+            </details>
+            
         </div>
+
         <div id="column3">
-            <h2>Store</h2>
+            <span><h2>Store</h2></span>
+            <span id="hands"></span>
             <span id="coms_members_buy"></span>
             <span id="pond_buy"></span>
             <span id="feed_buy"></span>

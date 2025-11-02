@@ -1,0 +1,93 @@
+/**
+ * CSS customization for store
+ */
+/*customizing the 'title' before the dropdown*/
+#column3 summary{
+    font-weight: bold;
+    border: 1px solid #000000;
+    cursor: help;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+}
+/*customizing the 'title' of the thing inside the dropdown*/
+#column3[open] summary{
+    font-weight: bold;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+}
+/*customizing the words before the dropdown*/
+#column3 details{
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+}
+/*customizing the words in the dropdown*/
+#column3 [open] details{
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+body{
+    display:flex;
+}
+
+#column1, #column2, #column3 {
+    display: block;
+    width: 33%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#gustavo_png {
+    margin: auto auto;
+    margin-top: -30px;
+    max-width: 100%;
+}
+
+p {
+    margin-top: -20px;
+}
+
+span {
+    display: block;
+    margin: 5px 5px;
+}
+
+hr {
+    border: 1px solid black;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* We couldn't figure out how to fit two buttons in one row, so we asked CoPilot to help us. */
+.buttons button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Theme buttons are direct children of the second details element in the markup.
+   Target any button that is a direct child of a details element so theme buttons
+   also arrange two per row without changing the HTML. */
+details > button {
+    display: inline-block;
+    width: 48%;
+    box-sizing: border-box;
+    margin: 5px 1%;
+    vertical-align: top;
+}
+
+button img {
+    width:50px;
+    height: auto;
+}
+

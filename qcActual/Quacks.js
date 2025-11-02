@@ -1,10 +1,15 @@
 class Quacks {
   // Constructor without parameters
-  constructor(QPS = 0, QPC = 1, multiplier = null) {
+  constructor(QPS = 0, QPC = 1, multiplier = 1) {
     this.QPS = QPS; // quacks per second
     this.QPC = QPC; // quacks per click
     this.multiplier = multiplier; 
     this.quacks = 0;
+  }
+
+  // click
+  click() {
+    this.quacks += this.QPC;
   }
 
   // Getters and setters
