@@ -1,3 +1,5 @@
+package quack;
+
 /**
  * Abstract class which every building extends from
  */

@@ -1,4 +1,8 @@
 package quack;
+<<<<<<< HEAD:quack/ImageLoaderTest.java
+=======
+
+>>>>>>> 6a3bfd5d22a157e7dd39ba6d0a41ba7ac40d57ef:qc/ImageLoaderTest.java
 import java.io.File;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
