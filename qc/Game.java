@@ -53,7 +53,7 @@ public class Game {
     }
 
     /**
-     * All initizations of each different building
+     * All initizations of each different building (14 different buildings total)
      */
     public static void createBuildings() {
         Building hand = new Building(15, 0.1); // 15, 0.1

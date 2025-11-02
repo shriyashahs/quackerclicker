@@ -21,7 +21,7 @@ public class Gacha {
     }
     public void buyGems() {
         gems++;
-        removeQuacks(gemCost);
+        // removeQuacks(gemCost);
         gemCost *= GEM_MULTIPLIER;
     }
 }
