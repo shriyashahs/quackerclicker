@@ -1,0 +1,9 @@
+pull character method/class? generate random number and character
+also pull theme 
+make gems, which can be bought with cookies
+set character, set theme
+boolean isUnlocked - make [?] visual if false
+screen to pull
+screen to see themes and characters
+give quacks if duplicates, multiply by cost of gem scale and rarity
+increase gem cost after giving duplicate forgivness quacks 
