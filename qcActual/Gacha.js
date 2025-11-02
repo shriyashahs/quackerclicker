@@ -69,43 +69,51 @@ class Gacha {
 
             if (pull >= 0 && pull < 0.1) { // %10
                 resultImage = "images/gustavo/67_gustavo.png";
-                document.getElementById("67_skin").src = resultImage;
                 six_seven_access = true;
+                if (six_seven_skin) six_seven_skin.src = resultImage;
+                if (six_seven_skin_button) six_seven_skin_button.onclick = () => this.update(this.image[1]);
             } 
             else if (pull >= 0.1 && pull < 0.2) { // %10
                 resultImage = "images/gustavo/duck_gustavo.png";
-                document.getElementById("duck_skin").src = resultImage;
                 duck_access = true;
+                if (duck_skin) duck_skin.src = resultImage;
+                if (duck_skin_button) duck_skin_button.onclick = () => this.update(this.image[6]);
             } 
             else if (pull >= 0.2 && pull < 0.3) { // %10
                 resultImage = "images/gustavo/hungry_gustavo.png";
-                document.getElementById("hungry_skin").src = resultImage;
                 hungry_access = true;
+                if (hungry_skin) hungry_skin.src = resultImage;
+                if (hungry_skin_button) hungry_skin_button.onclick = () => this.update(this.image[7]);
             } 
-            else if (pull >= 0.3 && pull < 0.5) { // %10
+            else if (pull >= 0.3 && pull < 0.5) { // %20
                 resultImage = "images/gustavo/miku_gustavo.png";
-                document.getElementById("miku_skin").src = resultImage;
                 miku_access = true;
+                if (miku_skin) miku_skin.src = resultImage;
+                if (miku_skin_button) miku_skin_button.onclick = () => this.update(this.image[2]);
             } 
             else if (pull >= 0.5 && pull < 0.78) { // %28
                 resultImage = "images/gustavo/minecraft_gustavo.png";
-                document.getElementById("minecraft_skin").src = resultImage;
                 minecraft_access = true;
+                if (minecraft_skin) minecraft_skin.src = resultImage;
+                if (minecraft_skin_button) minecraft_skin_button.onclick = () => this.update(this.image[4]);
             } 
             else if (pull >= 0.78 && pull < 0.88) { // %10
                 resultImage = "images/gustavo/quackbox_gustavo.png";
-                document.getElementById("quackbox_skin").src = resultImage;
                 quackbox_access = true;
+                if (quackbox_skin) quackbox_skin.src = resultImage;
+                if (quackbox_skin_button) quackbox_skin_button.onclick = () => this.update(this.image[8]);
             } 
             else if (pull >= 0.88 && pull < 0.93) { // %5
                 resultImage = "images/gustavo/ta_gustavo.png";
-                document.getElementById("ta_skin").src = resultImage;
                 ta_access = true;
+                if (ta_skin) ta_skin.src = resultImage;
+                if (ta_skin_button) ta_skin_button.onclick = () => this.update(this.image[3]);
             } 
             else if (pull >= 0.93 && pull <= 1) { // 7% 
                 resultImage = "images/gustavo/widget_gustavo.png";
-                document.getElementById("widget_skin").src = resultImage;
                 widget_access = true;
+                if (widget_skin) widget_skin.src = resultImage;
+                if (widget_skin_button) widget_skin_button.onclick = () => this.update(this.image[5]);
             }
 
             // Show the result image
@@ -126,89 +134,93 @@ class Gacha {
 
     image = [
     {
-        img:"qcActual/images/gustavo/base_gustavo.png"
+        img:"images/gustavo/base_gustavo.png"
     },
     {
-        img:"qcActual/images/gustavo/67_gustavo.png"
+        img:"images/gustavo/67_gustavo.png"
     },
     {
-        img:"qcActual/images/gustavo/miku_gustavo.png"
+        img:"images/gustavo/miku_gustavo.png"
     },
     {
-        img:"qcActual/images/gustavo/ta_gustavo.png"
+        img:"images/gustavo/ta_gustavo.png"
     },
     {
-        img:"qcActual/images/gustavo/minecraft_gustavo.png"
+        img:"images/gustavo/minecraft_gustavo.png"
     },
     {
-        img:"qcActual/images/gustavo/widget_gustavo.png"
+        img:"images/gustavo/widget_gustavo.png"
     },
     {
-        img:"qcActual/images/gustavo/duck_gustavo.png"
+        img:"images/gustavo/duck_gustavo.png"
     },
     {
-        img:"qcActual/images/gustavo/hungry_gustavo.png"
+        img:"images/gustavo/hungry_gustavo.png"
     },
     {
-        img:"qcActual/images/gustavo/quackbox_gustavo.png"
+        img:"images/gustavo/quackbox_gustavo.png"
     },
     ]
 
     update(image){
-        gustavo_png.src=image.img
+        if (gustavo_png) gustavo_png.src=image.img
     }
 
-    if (six_seven_access){
-        six_seven_skin.src="qcActual/images/gustavo/67_gustavo.png";
-        six_seven_skin_button.onclick=function() {
-            update(image[1]);
-        };
-    }
-    if (miku_access){
-        miku_skin.src="qcActual/images/gustavo/miku_gustavo.png";
-        miku_skin_button.onclick=function() {
-            update(image[2]);
-        };
-    }
-    if (ta_access){
-        ta_skin.src="qcActual/images/gustavo/ta_gustavo.png";
-        ta_skin_button.onclick=function() {
-            update(image[3]);
-        };
-    }
+    unlockedSkins() {
+        if (six_seven_access){
+            six_seven_skin.src="images/gustavo/67_gustavo.png";
+            six_seven_skin_button.onclick=function() {
+                update(image[1]);
+            };
+        }
 
-    if (minecraft_access){
-        minecraft_skin.src="qcActual/images/gustavo/minecraft_gustavo.png";
-        minecraft_skin_button.onclick=function() {
-            update(image[4]);
-        };
-    }
-    
-    if (widget_access){
-        widget_skin.src="qcActual/images/gustavo/widget_gustavo.png";
-        widget_skin_button.onclick=function() {
-            update(image[5]);
-        };
-    }
+        if (miku_access){
+            miku_skin.src="images/gustavo/miku_gustavo.png";
+            miku_skin_button.onclick=function() {
+                update(image[2]);
+            };
+        }
 
-    if (duck_access){
-        duck_skin.src="qcActual/images/gustavo/duck_gustavo.png";
-        duck_skin_button.onclick=function() {
-            update(image[6]);
-        };
-    }
+        if (ta_access){
+            ta_skin.src="images/gustavo/ta_gustavo.png";
+            ta_skin_button.onclick=function() {
+                update(image[3]);
+            };
+        }
 
-    if (hungry_access){
-        hungry_skin.src="qcActual/images/gustavo/hungry_gustavo.png";
-        hungry_skin_button.onclick=function() {
-            update(image[7]);
-        };
-    }
-    
-    if (quackbox_access){
-        quackbox_skin.src="qcActual/images/gustavo/quackbox_gustavo.png";
-        quackbox_skin_button.onclick=function() {
-            update(image[8]);
-        };
+        if (minecraft_access){
+            minecraft_skin.src="images/gustavo/minecraft_gustavo.png";
+            minecraft_skin_button.onclick=function() {
+                update(image[4]);
+            };
+        }
+        
+        if (widget_access){
+            widget_skin.src="images/gustavo/widget_gustavo.png";
+            widget_skin_button.onclick=function() {
+                update(image[5]);
+            };
+        }
+
+        if (duck_access){
+            duck_skin.src="images/gustavo/duck_gustavo.png";
+            duck_skin_button.onclick=function() {
+                update(image[6]);
+            };
+        }
+
+        if (hungry_access){
+            hungry_skin.src="images/gustavo/hungry_gustavo.png";
+            hungry_skin_button.onclick=function() {
+                update(image[7]);
+            };
+        }
+        
+        if (quackbox_access){
+            quackbox_skin.src="images/gustavo/quackbox_gustavo.png";
+            quackbox_skin_button.onclick=function() {
+                update(image[8]);
+            };
+        }
     }
 }
