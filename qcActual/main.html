@@ -8,7 +8,7 @@
         <div id="column1">
             <span id="amount_of_quacks" class="text"><h2>Number Quacks: 0</h2></span>
             <span id="amount_of_quacks_per_second" class="text"><p>Quacks Per Second: 0</p></span>
-            <span><button id="gustavo_png"><img src="images/gustavo/base_gustavo.png" alt="Gustavo"></button></span>
+            <span><button id="gustavo_png"><img id="gustavo_png_image" src="images/gustavo/base_gustavo.png" alt="Gustavo"></button></span>
             <span id="png_pile"></span>
         </div>
         
@@ -28,15 +28,15 @@
             <details>
                 <summary class="text">Change Skins</summary>
                 <div class="buttons">
-                    <button id="base_skin"><img src="images/gustavo/base_gustavo.png"></button>
-                    <button id="67_skin"><img src="images/question_mark.png"></button>
-                    <button id="miku_skin"><img src="images/question_mark.png"></button>
-                    <button id="ta_skin"><img src="images/question_mark.png"></button>
-                    <button id="minecraft_skin"><img src="images/question_mark.png"></button>
-                    <button id="widget_skin"><img src="images/question_mark.png"></button>
-                    <button id="duck_skin"><img src="images/question_mark.png"></button>
-                    <button id="hungry_skin"><img src="images/question_mark.png"></button>
-                    <button id="quackbox_skin"><img src="images/question_mark.png"></button>
+                    <button id="base_skin"><img id="base_skin_img" src="images/gustavo/base_gustavo.png"></button>
+                    <button id="67_skin"><img id="67_skin_img" src="images/question_mark.png"></button>
+                    <button id="miku_skin"><img id="miku_skin_img" src="images/question_mark.png"></button>
+                    <button id="ta_skin"><img id="ta_skin_img" src="images/question_mark.png"></button>
+                    <button id="minecraft_skin"><img id="minecraft_skin_img" src="images/question_mark.png"></button>
+                    <button id="widget_skin"><img id="widget_skin_img" src="images/question_mark.png"></button>
+                    <button id="duck_skin"><img id="duck_skin_img" src="images/question_mark.png"></button>
+                    <button id="hungry_skin"><img id="hungry_skin_img" src="images/question_mark.png"></button>
+                    <button id="quackbox_skin"><img id="quackbox_skin_img" src="images/question_mark.png"></button>
                 </div>
             </details>
             
@@ -54,11 +54,48 @@
             <span class="text"><h2>Store</h2></span>
             <span id="curr_stars"><h3>Stars &#x2726;: 0</h3></span>
             <div>
-                <button id="hands"><img src="images/upgrades/hand.png"></button>
-                <button id="coms_members_buy"><img src="images/upgrades/coms_member.png"></button>
-                <button id="pond_buy"><img src="images/upgrades/pond.png"></button>
-                <button id="feed_buy"><img src="images/upgrades/feed.png"></button>
-                <button id="shack_buy"><img src="images/upgrades/shack.png"></button>
+                <div class="button_upgrades"><button id="hands"><img src="images/upgrades/hand.png"></button></div>
+                <div class="upgrades">
+                    <span id="curr_hands"><h3>Hand: 0</h3></span>
+                    <span id="hands_cost"><h3>0</h3></span>
+                    <span id="hands_one_per_sec"><h3>Each hand produces 0 quacks per second</h3></span>
+                    <span id="hands_total_per_sec"><h3>0 hands producing 0 quacks per second</h3></span>
+                </div>
+
+                <div class="button_upgrades"><button id="coms_members_buy"><img src="images/upgrades/coms_member.png"></button></div>
+                <div class="upgrades">
+                    <span id="curr_coms_mems"><h3>Coms_Member: 0</h3></span>
+                    <span id="coms_mem_cost"><h3>0</h3></span>
+                    <span id="coms_mem_per_sec"><h3>Each coms member produces 0 quacks per second</h3></span>
+                    <span id="coms_mem_per_sec"><h3>0 coms members producing 0 quacks per second</h3></span>
+                </div>
+
+                <div class="button_upgrades"><button id="pond_buy"><img src="images/upgrades/pond.png"></button></div>
+                <div class="upgrades">
+                    <span id="curr_pond"><h3>Pond: 0</h3></span>
+                    <span id="pond_cost"><h3>0</h3></span>
+                    <span id="pond_one_per_sec"><h3>Each pond produces 0 quacks per second</h3></span>
+                    <span id="pond_total_per_sec"><h3>0 ponds producing 0 quacks per second</h3></span>
+                </div>
+
+
+                <div class="button_upgrades"><button id="feed_buy"><img src="images/upgrades/feed.png"></button></div>
+                <div class="upgrades">
+                    <span id="curr_feed"><h3>Feed: 0</h3></span>
+                    <span id="feed_cost"><h3>0</h3></span>
+                    <span id="feed_one_per_sec"><h3>Each feed produces 0 quacks per second</h3></span>
+                    <span id="feed_total_per_sec"><h3>0 feeds producing 0 quacks per second</h3></span>
+                </div>
+
+
+                <div class="button_upgrades"><button id="shack_buy"><img src="images/upgrades/shack.png"></button></div>
+                <div class="upgrades">
+                    <span id="curr_shack"><h3>Shack: 0</h3></span>
+                    <span id="shack_cost"><h3>0</h3></span>
+                    <span id="shack_one_per_sec"><h3>Each shack produces 0 quacks per second</h3></span>
+                    <span id="shack_total_per_sec"><h3>0 shacks producing 0 quacks per second</h3></span>
+                </div>
+
                 <!-- 
                 <button id="apartment_buy"><img src="images/upgrades/apartment.png"></button>
                 <button id="condo_buy"><img src="images/upgrades/condo.png" alt="condo"></button>

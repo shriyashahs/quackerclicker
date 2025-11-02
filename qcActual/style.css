@@ -41,15 +41,6 @@ hr {
 #roulette {
     width: 100%;
     visibility: hidden;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
 }
 
 #pull_pop {
@@ -81,6 +72,16 @@ details > button {
 
 #column3 button img {
     width: 50%;
+}
+
+.upgrades {
+    display: none;
+}
+
+.button_upgrades:hover + .upgrades {
+    display: block;
+    background-color: black;
+    color: white;
 }
 
 .theme-button {

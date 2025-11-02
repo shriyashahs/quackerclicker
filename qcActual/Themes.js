@@ -1,3 +1,4 @@
+//We made themes.js work with button images but decided to switch to just buttons instead. Copilot helped us debug because we couldn't figure out the problem
 document.addEventListener('DOMContentLoaded', () => {
     const texts = document.querySelectorAll(".text");
     const col1 = document.querySelector("#column1");
