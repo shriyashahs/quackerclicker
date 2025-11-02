@@ -1,3 +1,5 @@
+package quack;
+
 /**
  * Abstract class which every building extends from
  */
@@ -32,5 +34,11 @@ public class Building extends Quacks {
     }
     public void addAmt(int amt) {
         amount += amt;
+    }
+    public double getQPS() {
+        return qps;
+    }
+    public double getQPC() {
+        return qpc;
     }
 }
